@@ -1,0 +1,7 @@
+# Anonymize.dev Robots Configuration
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://anonymize.dev/sitemap.xml
