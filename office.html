@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Office Add-in - Anonymize directly in Word, Excel, and PowerPoint. Select text, click protect, done.">
+  <meta name="keywords" content="Office Add-in, Word, Excel, PowerPoint, Microsoft 365, document anonymization, PII protection">
+  <title>Office Add-in | Anonymize.dev</title>
+  <link rel="canonical" href="https://anonymize.dev/office.html">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="matrix-rain" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-icon">A</span>
+        Anonymize.dev
+      </a>
+      <div class="nav__links">
+        <a href="mcp.html" class="nav__link">MCP Server</a>
+        <a href="desktop.html" class="nav__link">Desktop</a>
+        <a href="features.html" class="nav__link">Features</a>
+        <a href="pricing.html" class="nav__link">Pricing</a>
+        <a href="docs.html" class="nav__link">Docs</a>
+      </div>
+      <div class="nav__cta">
+        <a href="https://anonym.legal" class="btn btn--primary" target="_blank">Get Started</a>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile">
+    <a href="mcp.html" class="nav__link">MCP Server</a>
+    <a href="desktop.html" class="nav__link">Desktop App</a>
+    <a href="office.html" class="nav__link nav__link--active">Office Add-in</a>
+    <a href="features.html" class="nav__link">Features</a>
+    <a href="pricing.html" class="nav__link">Pricing</a>
+    <a href="docs.html" class="nav__link">Docs</a>
+    <a href="contact.html" class="nav__link">Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero hero-animated" style="min-height: 80vh;">
+      <div class="hero__bg">
+        <div class="hero__grid"></div>
+      </div>
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__badge" style="border-color: var(--pulse-blue);">
+            <span style="color: var(--pulse-blue);">Microsoft 365 Integration</span>
+          </div>
+          <h1 class="hero__title">
+            <span class="text-gradient">Office</span> Add-in
+          </h1>
+          <p class="hero__subtitle">
+            Anonymize directly in Word, Excel, and PowerPoint. Select text, click protect, done.
+          </p>
+          <div class="hero__actions">
+            <a href="https://anonym.legal" class="btn btn--primary btn--large" target="_blank">
+              Get Add-in
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+            <a href="docs.html" class="btn btn--secondary btn--large">
+              Documentation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supported Applications -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section__header scroll-reveal">
+          <h2 class="section__title">Supported Applications</h2>
+          <p class="section__subtitle">Seamless integration with Microsoft 365</p>
+        </div>
+
+        <div class="grid grid--3 stagger-children">
+          <!-- Word -->
+          <div class="card text-center">
+            <div style="font-size: 4rem; margin-bottom: var(--space-lg);">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="64" height="64" style="color: #2B579A;">
+                <path d="M21.17 3H7.83A1.83 1.83 0 006 4.83v14.34A1.83 1.83 0 007.83 21h13.34A1.83 1.83 0 0023 19.17V4.83A1.83 1.83 0 0021.17 3zM13.25 17H11.5l-1.42-5.66L8.67 17H6.92l-2.17-10h1.67l1.42 5.66L9.25 7h1.5l1.42 5.66L13.58 7h1.67l-2 10zm4.25 0h-1.5V7h1.5v10z"/>
+                <path d="M1 4.83v14.34A1.83 1.83 0 002.83 21H6V3H2.83A1.83 1.83 0 001 4.83z" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Microsoft Word</h3>
+            <p class="card__description">Protect sensitive information in documents, letters, contracts, and reports directly within Word.</p>
+            <span class="trust__badge" style="color: var(--terminal-green); border-color: var(--terminal-green); margin-top: var(--space-lg);">Available</span>
+          </div>
+
+          <!-- Excel -->
+          <div class="card text-center">
+            <div style="font-size: 4rem; margin-bottom: var(--space-lg);">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="64" height="64" style="color: #217346;">
+                <path d="M21.17 3H7.83A1.83 1.83 0 006 4.83v14.34A1.83 1.83 0 007.83 21h13.34A1.83 1.83 0 0023 19.17V4.83A1.83 1.83 0 0021.17 3zM13.67 17h-1.75l-1.75-3.5L8.42 17H6.67l2.58-5L6.67 7h1.75l1.75 3.5L11.92 7h1.75l-2.58 5 2.58 5z"/>
+                <path d="M1 4.83v14.34A1.83 1.83 0 002.83 21H6V3H2.83A1.83 1.83 0 001 4.83z" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Microsoft Excel</h3>
+            <p class="card__description">Anonymize personal data in spreadsheets, databases, and data exports while preserving formulas.</p>
+            <span class="trust__badge" style="color: var(--terminal-green); border-color: var(--terminal-green); margin-top: var(--space-lg);">Available</span>
+          </div>
+
+          <!-- PowerPoint -->
+          <div class="card text-center">
+            <div style="font-size: 4rem; margin-bottom: var(--space-lg);">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="64" height="64" style="color: #D24726;">
+                <path d="M21.17 3H7.83A1.83 1.83 0 006 4.83v14.34A1.83 1.83 0 007.83 21h13.34A1.83 1.83 0 0023 19.17V4.83A1.83 1.83 0 0021.17 3zM12 16h-1.5v-3H12a1.5 1.5 0 000-3h-1.5V7H12a4.5 4.5 0 110 9z"/>
+                <path d="M1 4.83v14.34A1.83 1.83 0 002.83 21H6V3H2.83A1.83 1.83 0 001 4.83z" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Microsoft PowerPoint</h3>
+            <p class="card__description">Protect PII in presentations before sharing internally or with external stakeholders.</p>
+            <span class="trust__badge" style="color: var(--terminal-green); border-color: var(--terminal-green); margin-top: var(--space-lg);">Available</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header scroll-reveal">
+          <h2 class="section__title">Add-in Features</h2>
+          <p class="section__subtitle">Powerful anonymization without leaving Office</p>
+        </div>
+
+        <div class="grid grid--2 stagger-children">
+          <div class="feature-item scroll-reveal">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+              </svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">In-Place Editing</h3>
+              <p class="feature-item__description">Select text and anonymize it directly within your document. No need to copy-paste or switch applications.</p>
+            </div>
+          </div>
+
+          <div class="feature-item scroll-reveal">
+            <div class="feature-item__icon" style="color: var(--terminal-green);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="9" y1="9" x2="15" y2="15"/>
+                <line x1="15" y1="9" x2="9" y2="15"/>
+              </svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Selection or Full Document</h3>
+              <p class="feature-item__description">Anonymize selected text only or process the entire document with one click. You choose the scope.</p>
+            </div>
+          </div>
+
+          <div class="feature-item scroll-reveal">
+            <div class="feature-item__icon" style="color: var(--neon-magenta);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Smart Detection</h3>
+              <p class="feature-item__description">Automatically identifies 50+ entity types across 48 languages using advanced NLP models.</p>
+            </div>
+          </div>
+
+          <div class="feature-item scroll-reveal">
+            <div class="feature-item__icon" style="color: var(--pulse-blue);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Multiple Methods</h3>
+              <p class="feature-item__description">Choose from Replace, Redact, Hash (SHA-256), Encrypt (AES-256-GCM), or Mask based on your needs.</p>
+            </div>
+          </div>
+
+          <div class="feature-item scroll-reveal">
+            <div class="feature-item__icon" style="color: var(--electric-cyan);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Preserves Formatting</h3>
+              <p class="feature-item__description">Your document formatting, styles, and layout remain intact. Only the sensitive content changes.</p>
+            </div>
+          </div>
+
+          <div class="feature-item scroll-reveal">
+            <div class="feature-item__icon" style="color: var(--hot-coral);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+              </svg>
+            </div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">Works Offline</h3>
+              <p class="feature-item__description">Core functionality works without internet. Analysis requires connectivity for NLP processing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How To Install -->
+    <section class="section section--dark">
+      <div class="container container--narrow">
+        <div class="section__header scroll-reveal">
+          <h2 class="section__title">Installation</h2>
+          <p class="section__subtitle">Get started in three easy steps</p>
+        </div>
+
+        <div class="flow scroll-reveal">
+          <div class="flow__step">
+            <div class="flow__number">1</div>
+            <h3 class="flow__title">Get Add-in</h3>
+            <p class="flow__description">Install from Microsoft AppSource or sideload manually</p>
+          </div>
+
+          <svg class="flow__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+
+          <div class="flow__step">
+            <div class="flow__number" style="border-color: var(--terminal-green); color: var(--terminal-green);">2</div>
+            <h3 class="flow__title">Sign In</h3>
+            <p class="flow__description">Log in with your anonym.legal account</p>
+          </div>
+
+          <svg class="flow__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+
+          <div class="flow__step">
+            <div class="flow__number" style="border-color: var(--electric-cyan); color: var(--electric-cyan);">3</div>
+            <h3 class="flow__title">Start Using</h3>
+            <p class="flow__description">Find the Anonymize button in your ribbon</p>
+          </div>
+        </div>
+
+        <div class="scroll-reveal mt-3xl text-center">
+          <a href="https://anonym.legal" class="btn btn--primary btn--large" target="_blank">
+            Get Add-in from AppSource
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header scroll-reveal">
+          <h2 class="section__title">Use Cases</h2>
+          <p class="section__subtitle">How teams use the Office Add-in</p>
+        </div>
+
+        <div class="grid grid--3 stagger-children">
+          <div class="card">
+            <h3 class="card__title" style="color: var(--electric-cyan);">Legal Teams</h3>
+            <p class="card__description">Redact client names and case details before sharing documents with opposing counsel or for training purposes.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title" style="color: var(--terminal-green);">HR Departments</h3>
+            <p class="card__description">Anonymize employee data in spreadsheets and reports for audits, analytics, and compliance reviews.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title" style="color: var(--neon-magenta);">Healthcare</h3>
+            <p class="card__description">Protect patient information (PHI) in medical documents and presentations for research and education.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title" style="color: var(--pulse-blue);">Finance</h3>
+            <p class="card__description">Mask account numbers, transaction details, and customer data in financial reports and statements.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title" style="color: var(--hot-coral);">Education</h3>
+            <p class="card__description">Anonymize student records and grades for research studies while maintaining data integrity.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title" style="color: var(--text-muted);">Consulting</h3>
+            <p class="card__description">Protect client-specific information when reusing case studies and presentations for new prospects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OpenOffice -->
+    <section class="section section--dark">
+      <div class="container text-center">
+        <div class="section__header scroll-reveal">
+          <h2 class="section__title">Also Available for OpenOffice</h2>
+          <p class="section__subtitle">LibreOffice and OpenOffice integration coming soon</p>
+        </div>
+
+        <div class="scroll-reveal" style="max-width: 500px; margin: 0 auto;">
+          <div class="card" style="opacity: 0.7;">
+            <div style="font-size: 3rem; margin-bottom: var(--space-md);">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48" style="color: var(--text-muted);">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <h3 class="card__title">OpenOffice / LibreOffice</h3>
+            <p class="card__description">Extension for Writer, Calc, and Impress. Currently in development.</p>
+            <span class="trust__badge" style="color: var(--neon-magenta); border-color: var(--neon-magenta); margin-top: var(--space-lg);">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container text-center">
+        <h2 class="mb-lg scroll-reveal">Ready to protect your Office documents?</h2>
+        <p class="text-muted mb-xl scroll-reveal" style="max-width: 500px; margin-left: auto; margin-right: auto;">
+          Install the add-in today. Works with your existing anonym.legal subscription.
+        </p>
+        <div class="flex justify-center gap-md scroll-reveal">
+          <a href="https://anonym.legal" class="btn btn--primary btn--large" target="_blank">Get Office Add-in</a>
+          <a href="contact.html" class="btn btn--secondary btn--large">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="/" class="footer__logo">Anonymize.dev</a>
+        <p class="footer__tagline">Privacy-as-Code for developers.</p>
+      </div>
+      <div>
+        <h2 class="footer__title">Products</h2>
+        <a href="mcp.html" class="footer__link">MCP Server</a>
+        <a href="desktop.html" class="footer__link">Desktop App</a>
+        <a href="office.html" class="footer__link">Office Add-in</a>
+      </div>
+      <div>
+        <h2 class="footer__title">Resources</h2>
+        <a href="features.html" class="footer__link">Features</a>
+        <a href="pricing.html" class="footer__link">Pricing</a>
+        <a href="docs.html" class="footer__link">Documentation</a>
+      </div>
+      <div>
+        <h2 class="footer__title">Company</h2>
+        <a href="contact.html" class="footer__link">Contact</a>
+        <a href="https://anonym.legal" class="footer__link" target="_blank">Main Platform</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">2026 Anonymize.dev. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="datenschutz.html">Privacy Policy</a>
+        <a href="impressum.html">Imprint</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/terminal.js"></script>
+</body>
+</html>
