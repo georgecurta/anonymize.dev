@@ -80,13 +80,13 @@
       <div class="container">
         <div class="hero__content">
           <div class="hero__badge">
-            <span>MCP Server Available</span>
+            <span>For Developers</span>
           </div>
           <h1 class="hero__title">
-            <span class="text-gradient">Privacy</span>-as-Code
+            <span class="text-gradient">Data Anonymization</span> for AI Workflows
           </h1>
           <p class="hero__subtitle">
-            Protect sensitive data in your AI workflows. Automatically detect and anonymize PII before it reaches your models.
+            Stop sending real names, emails, and personal data to AI models. Our MCP Server automatically detects and replaces PII in your prompts—then restores it in the response.
           </p>
           <div class="hero__actions">
             <a href="mcp.html" class="btn btn--green btn--large">
@@ -95,8 +95,8 @@
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <a href="docs.html" class="btn btn--secondary btn--large">
-              View Docs
+            <a href="#what-is-this" class="btn btn--secondary btn--large">
+              See How It Works
             </a>
           </div>
         </div>
@@ -108,29 +108,83 @@
               <span class="terminal__dot terminal__dot--red"></span>
               <span class="terminal__dot terminal__dot--yellow"></span>
               <span class="terminal__dot terminal__dot--green"></span>
-              <span class="terminal__title">claude_desktop_config.json</span>
+              <span class="terminal__title">your_prompt.txt</span>
             </div>
             <div class="terminal__body hero-terminal">
               <div class="terminal__line">
-                <span class="terminal__comment"># Configure MCP Server</span>
+                <span class="terminal__comment"># Your prompt with real data:</span>
               </div>
-              <div class="terminal__line">
-                <span class="terminal__prompt">$ </span>
-                <span class="terminal__command">npx @anonym-legal/mcp-server</span>
+              <div class="terminal__output" style="color: var(--hot-coral);">
+                "Summarize the contract between<br>
+                &nbsp;<strong>John Smith</strong> (john@acme.com)<br>
+                &nbsp;and <strong>Sarah Miller</strong>..."
               </div>
-              <div class="terminal__output">
-                <span class="terminal__keyword">{</span><br>
-                &nbsp;&nbsp;<span class="terminal__attr">"mcpServers"</span>: {<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="terminal__attr">"anonymize"</span>: {<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="terminal__attr">"command"</span>: <span class="terminal__string">"npx"</span>,<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="terminal__attr">"args"</span>: [<span class="terminal__string">"-y"</span>, <span class="terminal__string">"@anonym-legal/mcp-server"</span>]<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                &nbsp;&nbsp;}<br>
-                <span class="terminal__keyword">}</span>
+              <div class="terminal__line" style="margin-top: 12px;">
+                <span class="terminal__comment"># What AI actually receives:</span>
               </div>
-              <div class="terminal__line">
-                <span class="terminal__comment"># PII is now auto-protected!</span>
+              <div class="terminal__output" style="color: var(--terminal-green);">
+                "Summarize the contract between<br>
+                &nbsp;<strong>[PERSON_1]</strong> ([EMAIL_1])<br>
+                &nbsp;and <strong>[PERSON_2]</strong>..."
               </div>
+              <div class="terminal__line" style="margin-top: 12px;">
+                <span class="terminal__comment" style="color: var(--electric-cyan);"># Response comes back with real names restored!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Is This Section -->
+    <section class="section" id="what-is-this" style="background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);">
+      <div class="container">
+        <div class="section__header scroll-reveal">
+          <h2 class="section__title">What is Anonymize.dev?</h2>
+          <p class="section__subtitle">
+            A privacy layer for developers who use AI tools like Claude, Cursor, or ChatGPT
+          </p>
+        </div>
+
+        <div class="grid grid--2 scroll-reveal" style="gap: var(--space-3xl); align-items: center;">
+          <div>
+            <h3 style="color: var(--hot-coral); margin-bottom: var(--space-md);">The Problem</h3>
+            <p class="mb-lg">
+              When you use AI coding assistants, you often paste code, logs, or documents containing <strong>real customer data</strong>—names, emails, API keys, database entries.
+            </p>
+            <p class="text-muted">
+              That data goes to external servers. Even with good intentions, it's a GDPR risk, a security risk, and a trust issue with your users.
+            </p>
+          </div>
+          <div>
+            <h3 style="color: var(--terminal-green); margin-bottom: var(--space-md);">The Solution</h3>
+            <p class="mb-lg">
+              Anonymize.dev sits between you and the AI. It <strong>automatically detects 50+ types of personal data</strong> (names, emails, phone numbers, credit cards, IBANs, IPs...) and replaces them with tokens.
+            </p>
+            <p class="text-muted">
+              The AI sees <code>[PERSON_1]</code> instead of "John Smith". When the response comes back, we restore the original values. Zero data leakage.
+            </p>
+          </div>
+        </div>
+
+        <div class="scroll-reveal text-center mt-3xl">
+          <p style="font-family: var(--font-mono); color: var(--syntax-slate); margin-bottom: var(--space-lg);">Works with:</p>
+          <div class="flex justify-center gap-xl flex-wrap">
+            <div class="text-center">
+              <div style="font-size: 2.5rem; margin-bottom: var(--space-sm);">🤖</div>
+              <div style="font-size: var(--text-sm);">Claude Desktop</div>
+            </div>
+            <div class="text-center">
+              <div style="font-size: 2.5rem; margin-bottom: var(--space-sm);">⚡</div>
+              <div style="font-size: var(--text-sm);">Cursor IDE</div>
+            </div>
+            <div class="text-center">
+              <div style="font-size: 2.5rem; margin-bottom: var(--space-sm);">💬</div>
+              <div style="font-size: var(--text-sm);">ChatGPT (soon)</div>
+            </div>
+            <div class="text-center">
+              <div style="font-size: 2.5rem; margin-bottom: var(--space-sm);">🔌</div>
+              <div style="font-size: var(--text-sm);">REST API</div>
             </div>
           </div>
         </div>
