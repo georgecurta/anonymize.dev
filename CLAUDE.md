@@ -117,7 +117,6 @@ anonymize.dev/
 │   ├── THEME-NEON-PROTOCOL.md
 │   ├── assets/
 │   └── marketing/
-├── tests/              # Playwright test suites
 ├── CLAUDE.md           # This file
 ├── MARKETING-CONCEPT.md
 └── CHANGELOG.md
@@ -161,6 +160,7 @@ anonymize.dev/
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.0.4 | 2026-02-08 | Fixed contact form JSON submission, error handling |
 | 1.0.3 | 2026-02-08 | SEO/accessibility: llms.txt, security.txt, OG/Twitter meta, contrast fixes, 100% Lighthouse |
 | 1.0.1 | 2026-02-08 | Improved homepage clarity - problem/solution messaging, before/after example |
 | 1.0.0 | 2026-02-08 | Complete site with all 10 pages, brand assets, marketing materials |
