@@ -160,5 +160,6 @@ anonymize.dev/
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.0.1 | 2026-02-08 | Improved homepage clarity - problem/solution messaging, before/after example |
 | 1.0.0 | 2026-02-08 | Complete site with all 10 pages, brand assets, marketing materials |
 | 0.1.0 | 2026-02-07 | Initial concept, design philosophy, project structure |

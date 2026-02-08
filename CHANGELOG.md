@@ -4,6 +4,17 @@ All notable changes to the Anonymize.dev website will be documented in this file
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [1.0.1] - 2026-02-08
+
+### Changed
+- **Homepage hero**: Clearer messaging - "Data Anonymization for AI Workflows" with "For Developers" badge
+- **Terminal example**: Before/after demonstration showing real data → tokenized data transformation
+- **New section**: "What is Anonymize.dev?" explaining problem (data leakage) and solution (automatic PII protection)
+- **Works with icons**: Visual indicators for Claude Desktop, Cursor IDE, ChatGPT, REST API
+- **CTA button**: "See How It Works" scrolls to explanation section
+
+---
+
 ## [1.0.0] - 2026-02-08
 
 ### Added
