@@ -4,6 +4,15 @@ All notable changes to the Anonymize.dev website will be documented in this file
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [1.0.4] - 2026-02-08
+
+### Fixed
+- **Contact form**: Fixed JSON submission - form was sending FormData but API expected JSON
+- **Error handling**: Fixed error message extraction to check both `result.error` and `result.errors`
+- **reCAPTCHA**: Added proper token generation before form submission
+
+---
+
 ## [1.0.3] - 2026-02-08
 
 ### Added
