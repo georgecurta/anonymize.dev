@@ -4,6 +4,27 @@ All notable changes to the Anonymize.dev website will be documented in this file
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [1.0.3] - 2026-02-08
+
+### Added
+- **llms.txt** - AI crawler-friendly site description
+- **security.txt** - Security vulnerability disclosure policy (/.well-known/security.txt)
+- **robots.txt** - AI crawler directives (GPTBot, ClaudeBot, Anthropic-AI, PerplexityBot, etc.)
+
+### Changed
+- **Open Graph tags** - Added og:image, og:locale, og:site_name meta tags
+- **Twitter Cards** - Added twitter:card, twitter:title, twitter:description, twitter:image
+- **Contrast fix** - Darkened --syntax-slate color for better WCAG compliance
+- **SEO fix** - Replaced generic "Learn more" with descriptive "Explore MCP Server" link text
+
+### Lighthouse Scores
+- Performance: 96
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 100
+
+---
+
 ## [1.0.1] - 2026-02-08
 
 ### Changed
