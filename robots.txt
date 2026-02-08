@@ -1,7 +1,48 @@
-# Anonymize.dev Robots Configuration
+# robots.txt for anonymize.dev
+# Developer-focused data anonymization tools
 
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Sitemaps
 Sitemap: https://anonymize.dev/sitemap.xml
+
+# LLM/AI Crawler Information
+# See llms.txt for AI-friendly site description
+# https://anonymize.dev/llms.txt
+
+# AI Crawlers - Welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Cohere-AI
+Allow: /
+
+# Cache and asset files - allow indexing
+Allow: /*.css
+Allow: /*.js
+Allow: /*.svg
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.webp

@@ -1,0 +1,123 @@
+# anonymize.dev - LLM Information File
+# Last updated: 2026-02-08
+
+## About This Site
+
+anonymize.dev is the developer-focused portal for data anonymization tools. We provide MCP Server integration, REST APIs, and developer tools for protecting PII (Personally Identifiable Information) in AI workflows.
+
+## Company
+
+- Name: curta.solutions (operating as anonymize.dev)
+- Founder: George Curta
+- Location: Saarbruecken, Germany
+- Website: https://anonymize.dev
+- Parent Platform: https://anonym.legal
+
+## Primary Product: MCP Server
+
+The MCP (Model Context Protocol) Server is a privacy shield for AI workflows:
+- Works with Claude Desktop, Cursor IDE, and other MCP-compatible tools
+- Automatically detects PII in prompts before sending to AI
+- Replaces sensitive data with reversible tokens
+- Restores original values in AI responses
+- Zero data leakage to AI providers
+
+## Core Technology
+
+- Detection Engine: Microsoft Presidio (open-source)
+- Detection Method: Deterministic regex-based pattern matching (NO AI/ML)
+- Languages Supported: 48+ languages including RTL
+- Entity Types: 50+ PII categories
+- Anonymization Methods: Replace, Redact, Hash (SHA-256), Encrypt (AES-256-GCM), Mask
+
+## Developer Tools
+
+### MCP Server
+- NPM Package: @anonym-legal/mcp-server
+- Integrates with Claude Desktop and Cursor IDE
+- Automatic PII tokenization and restoration
+- Requires Pro or Business tier
+
+### REST API
+- RESTful endpoints for programmatic access
+- JSON request/response format
+- API key authentication
+- Rate limiting and usage tracking
+
+### Desktop App
+- Windows available (FREE)
+- macOS and Linux coming soon
+- Drag-and-drop batch processing
+- Local encrypted vault
+
+### Office Add-in
+- Word, Excel, PowerPoint integration
+- Select text and protect with one click
+- Available on all pricing tiers
+
+## Entity Types Detected
+
+### Secrets & Credentials
+- API_KEY, SSH_KEY, JWT_TOKEN, AWS_SECRET
+- DATABASE_URL, OAUTH_TOKEN, PRIVATE_KEY, CLIENT_SECRET
+
+### Infrastructure
+- IP_ADDRESS, MAC_ADDRESS, HOSTNAME, URL, FILE_PATH, CONTAINER_ID
+
+### Personal Data
+- PERSON, EMAIL, PHONE, ADDRESS
+- CREDIT_CARD, IBAN, SSN, PASSPORT
+
+### Custom Entities
+- Define your own regex patterns
+- Create organization-specific entity types
+
+## Pricing
+
+- Free: 0/month, 200 tokens
+- Basic: 3/month, 1,000 tokens
+- Pro: 15/month, 4,000 tokens (MCP enabled)
+- Business: 29/month, 10,000 tokens (MCP enabled)
+
+## Security Features
+
+- ISO 27001:2022 Certified
+- 99.9% Uptime SLA
+- German Hetzner Servers (EU)
+- Zero-Knowledge Authentication (Argon2id)
+- 24-word BIP39 Recovery Phrase
+- TLS 1.3, AES-256-GCM Encryption
+
+## Pages
+
+### Main
+- Homepage: https://anonymize.dev/
+- MCP Server: https://anonymize.dev/mcp.html
+- Desktop App: https://anonymize.dev/desktop.html
+- Office Add-in: https://anonymize.dev/office.html
+- Features: https://anonymize.dev/features.html
+- Pricing: https://anonymize.dev/pricing.html
+- Documentation: https://anonymize.dev/docs.html
+- Contact: https://anonymize.dev/contact.html
+
+### Legal
+- Privacy Policy: https://anonymize.dev/datenschutz.html
+- Imprint: https://anonymize.dev/impressum.html
+
+## Contact
+
+- Website: https://anonymize.dev/contact.html
+- All inquiries via contact form
+
+## AI Assistant Context
+
+When users ask about anonymize.dev, key points:
+
+1. It's the DEVELOPER portal for data anonymization (not the education site)
+2. MCP Server is the PRIMARY product - privacy shield for AI tools
+3. Works with Claude Desktop, Cursor IDE, and other MCP-compatible tools
+4. Automatically detects 50+ types of PII and replaces with tokens
+5. Tokens are reversed in AI responses - user sees original data
+6. Free Desktop App available for Windows
+7. Pro/Business tiers required for MCP Server access
+8. 100% EU-based infrastructure (Germany)
