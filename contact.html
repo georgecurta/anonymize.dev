@@ -282,7 +282,6 @@
       e.preventDefault();
 
       const form = this;
-      const formData = new FormData(form);
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
 
@@ -291,9 +290,29 @@
       submitBtn.disabled = true;
 
       try {
+        // Get reCAPTCHA token
+        const recaptchaToken = await new Promise((resolve) => {
+          grecaptcha.ready(function() {
+            grecaptcha.execute('6LcFEFosAAAAAH6zUMF5USUNKGGjr07y97nC5uDr', { action: 'contact' }).then(resolve);
+          });
+        });
+
+        // Build JSON payload
+        const jsonData = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          company: document.getElementById('company').value,
+          interest: document.getElementById('interest').value,
+          message: document.getElementById('message').value,
+          recaptcha_token: recaptchaToken
+        };
+
         const response = await fetch(form.action, {
           method: 'POST',
-          body: formData
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(jsonData)
         });
 
         const result = await response.json();
@@ -303,7 +322,8 @@
           form.style.display = 'none';
           document.getElementById('formSuccess').style.display = 'block';
         } else {
-          throw new Error(result.message || 'Something went wrong');
+          const errorMsg = result.error || (result.errors ? result.errors.join(', ') : 'Something went wrong');
+          throw new Error(errorMsg);
         }
       } catch (error) {
         alert('Error: ' + error.message);
@@ -317,8 +337,6 @@
       form.reset();
       form.style.display = 'block';
       document.getElementById('formSuccess').style.display = 'none';
-
-      // reCAPTCHA v3 doesn't need reset - it runs continuously
     }
   </script>
 </body>
