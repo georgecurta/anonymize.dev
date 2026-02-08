@@ -294,42 +294,80 @@
           </p>
         </div>
 
-        <div class="flow scroll-reveal">
-          <div class="flow__step">
-            <div class="flow__number">1</div>
-            <h3 class="flow__title">Your Prompt</h3>
-            <p class="flow__description">Send a prompt containing sensitive data to your AI tool</p>
+        <!-- Visual Flow Diagram -->
+        <div class="flow-visual scroll-reveal" style="max-width: 900px; margin: 0 auto;">
+
+          <!-- Step 1: Your Prompt -->
+          <div class="flow-box" style="background: var(--bg-tertiary); border: 1px solid var(--hot-coral); border-radius: 8px; padding: var(--space-lg); margin-bottom: var(--space-lg);">
+            <div style="display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-md);">
+              <span style="background: var(--hot-coral); color: var(--bg-primary); font-family: var(--font-mono); font-weight: 700; padding: 4px 12px; border-radius: 4px;">1</span>
+              <h3 style="margin: 0; color: var(--hot-coral);">You Write a Prompt</h3>
+            </div>
+            <code style="display: block; background: var(--bg-primary); padding: var(--space-md); border-radius: 4px; color: var(--text-muted); font-size: var(--text-sm);">
+              "Review the contract for <span style="color: var(--hot-coral); font-weight: 600;">John Smith</span> (<span style="color: var(--hot-coral); font-weight: 600;">john@acme.com</span>)"
+            </code>
           </div>
 
-          <svg class="flow__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-
-          <div class="flow__step">
-            <div class="flow__number" style="border-color: var(--terminal-green); color: var(--terminal-green);">2</div>
-            <h3 class="flow__title">MCP Intercepts</h3>
-            <p class="flow__description">PII is detected and replaced with reversible tokens</p>
+          <!-- Arrow Down -->
+          <div style="text-align: center; margin: var(--space-md) 0; color: var(--syntax-slate);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32" style="transform: rotate(90deg);">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
           </div>
 
-          <svg class="flow__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-
-          <div class="flow__step">
-            <div class="flow__number">3</div>
-            <h3 class="flow__title">AI Processes</h3>
-            <p class="flow__description">Sanitized prompt goes to the model, response comes back</p>
+          <!-- Step 2: MCP Intercepts -->
+          <div class="flow-box" style="background: var(--bg-tertiary); border: 1px solid var(--terminal-green); border-radius: 8px; padding: var(--space-lg); margin-bottom: var(--space-lg);">
+            <div style="display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-md);">
+              <span style="background: var(--terminal-green); color: var(--bg-primary); font-family: var(--font-mono); font-weight: 700; padding: 4px 12px; border-radius: 4px;">2</span>
+              <h3 style="margin: 0; color: var(--terminal-green);">MCP Server Anonymizes</h3>
+            </div>
+            <code style="display: block; background: var(--bg-primary); padding: var(--space-md); border-radius: 4px; color: var(--text-muted); font-size: var(--text-sm);">
+              "Review the contract for <span style="color: var(--terminal-green); font-weight: 600;">[PERSON_1]</span> (<span style="color: var(--terminal-green); font-weight: 600;">[EMAIL_1]</span>)"
+            </code>
+            <p style="margin: var(--space-md) 0 0 0; font-size: var(--text-sm); color: var(--syntax-slate);">
+              PII detected and replaced with tokens. Original values stored securely.
+            </p>
           </div>
 
-          <svg class="flow__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-
-          <div class="flow__step">
-            <div class="flow__number" style="border-color: var(--electric-cyan); color: var(--electric-cyan);">4</div>
-            <h3 class="flow__title">Data Restored</h3>
-            <p class="flow__description">Tokens are replaced with original values in the response</p>
+          <!-- Arrow Down -->
+          <div style="text-align: center; margin: var(--space-md) 0; color: var(--syntax-slate);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32" style="transform: rotate(90deg);">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
           </div>
+
+          <!-- Step 3: AI Processes -->
+          <div class="flow-box" style="background: var(--bg-tertiary); border: 1px solid var(--pulse-blue); border-radius: 8px; padding: var(--space-lg); margin-bottom: var(--space-lg);">
+            <div style="display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-md);">
+              <span style="background: var(--pulse-blue); color: var(--bg-primary); font-family: var(--font-mono); font-weight: 700; padding: 4px 12px; border-radius: 4px;">3</span>
+              <h3 style="margin: 0; color: var(--pulse-blue);">AI Processes Safely</h3>
+            </div>
+            <p style="margin: 0; color: var(--text-muted); font-size: var(--text-sm);">
+              Claude/ChatGPT only sees anonymized data. No real PII ever leaves your machine.
+            </p>
+          </div>
+
+          <!-- Arrow Down -->
+          <div style="text-align: center; margin: var(--space-md) 0; color: var(--syntax-slate);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32" style="transform: rotate(90deg);">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+
+          <!-- Step 4: Response Restored -->
+          <div class="flow-box" style="background: var(--bg-tertiary); border: 1px solid var(--electric-cyan); border-radius: 8px; padding: var(--space-lg);">
+            <div style="display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-md);">
+              <span style="background: var(--electric-cyan); color: var(--bg-primary); font-family: var(--font-mono); font-weight: 700; padding: 4px 12px; border-radius: 4px;">4</span>
+              <h3 style="margin: 0; color: var(--electric-cyan);">Response with Real Data</h3>
+            </div>
+            <code style="display: block; background: var(--bg-primary); padding: var(--space-md); border-radius: 4px; color: var(--text-muted); font-size: var(--text-sm);">
+              "The contract for <span style="color: var(--electric-cyan); font-weight: 600;">John Smith</span> includes..."
+            </code>
+            <p style="margin: var(--space-md) 0 0 0; font-size: var(--text-sm); color: var(--syntax-slate);">
+              Tokens replaced with original values. You see the complete response.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
