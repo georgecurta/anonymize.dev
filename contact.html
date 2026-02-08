@@ -17,8 +17,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- reCAPTCHA -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcFEFosAAAAAH6zUMF5USUNKGGjr07y97nC5uDr"></script>
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
@@ -137,7 +137,7 @@
             <span style="color: var(--terminal-green);">$</span> send_message --to anonymize.dev
           </div>
           <div class="contact-form__body">
-            <form id="contact-form" action="api/send-message.php" method="POST">
+            <form id="contactForm" action="api/send-message.php" method="POST">
               <div class="form-group">
                 <label for="name" class="form-label">Name <span style="color: var(--hot-coral);">*</span></label>
                 <input type="text" id="name" name="name" class="form-input" required placeholder="Your name">
@@ -171,10 +171,8 @@
                 <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us about your project or question..."></textarea>
               </div>
 
-              <!-- reCAPTCHA -->
-              <div class="form-group">
-                <div class="g-recaptcha" data-sitekey="6LdcXYcqAAAAALXQ64bLMvT75gcVFvtqyTZS3rXV" data-theme="dark"></div>
-              </div>
+              <!-- reCAPTCHA v3 (invisible) -->
+              <input type="hidden" name="recaptcha_token" id="recaptcha_token">
 
               <button type="submit" class="btn btn--green btn--large" style="width: 100%;">
                 Send Message
@@ -191,7 +189,7 @@
             </form>
 
             <!-- Success Message (hidden by default) -->
-            <div id="form-success" class="form-success" style="display: none;">
+            <div id="formSuccess" class="form-success" style="display: none;">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--terminal-green)" stroke-width="2" width="64" height="64">
                 <circle cx="12" cy="12" r="10"/>
                 <path d="M9 12l2 2 4-4"/>
@@ -284,7 +282,7 @@
 
   <script>
     // Contact Form Handler
-    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
       e.preventDefault();
 
       const form = this;
@@ -307,7 +305,7 @@
         if (result.success) {
           // Show success message
           form.style.display = 'none';
-          document.getElementById('form-success').style.display = 'block';
+          document.getElementById('formSuccess').style.display = 'block';
         } else {
           throw new Error(result.message || 'Something went wrong');
         }
@@ -319,15 +317,12 @@
     });
 
     function resetForm() {
-      const form = document.getElementById('contact-form');
+      const form = document.getElementById('contactForm');
       form.reset();
       form.style.display = 'block';
-      document.getElementById('form-success').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'none';
 
-      // Reset reCAPTCHA
-      if (typeof grecaptcha !== 'undefined') {
-        grecaptcha.reset();
-      }
+      // reCAPTCHA v3 doesn't need reset - it runs continuously
     }
   </script>
 </body>
