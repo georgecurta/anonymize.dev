@@ -132,6 +132,7 @@ anonymize.dev/
 - Emails sent via Microsoft Graph API
 
 ### Interest Topics
+- sales: Sales Inquiry
 - mcp: MCP Server Integration
 - api: API Access
 - desktop: Desktop App

@@ -129,6 +129,7 @@ if (!empty($recaptchaToken) && defined('RECAPTCHA_SECRET_KEY')) {
 
 // Map interest to readable label
 $interestLabels = [
+    'sales' => 'Sales Inquiry',
     'mcp' => 'MCP Server Integration',
     'api' => 'API Access',
     'desktop' => 'Desktop App',
